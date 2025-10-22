@@ -126,3 +126,21 @@ try {          //le try catch me permet à me connecter
             </form>
         </body>
         </html>
+<?php 
+
+    try {
+
+        $mail = new PHPMailer(true)
+
+         // Ici je fais le parametrage de PHPMailer pour envoyer un mail automatique
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'Tp1PHP@gmail.com';
+        $mail->Password = 'llxpspneydlofsxe';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Envoie de l'email
+        $mail->send();
+?>
